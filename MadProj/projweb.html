@@ -1,74 +1,193 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .column {
+        float: left;
+        /*width: 50%;*/
+        padding: 10px;
+        /*height: 500px; *//* Should be removed. Only for demonstration */
+      }
+      .left {
+        width: 35%;
+      }
+
+      .right {
+        width: 55%;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+</style>
     <title>MAD Documentation</title>
- </head>
-<body>
- <header>
-    <h1>MAD- Medical Awesome data</h1>
+  </head>
+  <body>
+    <header>
+      <h1>MAD - Medical Awesome data</h1>
     </header>
-<section typeof="sa:About" id="about" role="doc-about">
+    <section typeof="sa:About" id="about" role="doc-about">
       <h2> <span>1. </span>About</h2>
       <p>
-       MAD- Medical Awesome data este un site dedicat sfaturilor medicale. Scolarii si nu numai au la dispozitie o platforma unde gasesc o sectiune de forum, blog, travel and discover the world. Toate acestea ii ajuta  sa gaseasca raspunsurile la intrebarile lor, de citeasca articole interesante medicale pe diferite subiecte, sa fie protejati in noile calatorii si sa descopere informatii  noi despre orice regiune de pe glob.
+       MAD- Medical Awesome data
+       is a website meant for medical advice. Middle and highschool students have access to a platform where
+       they can find sections for forums, blogs, travel and discover the world. All these help them find answers
+       to their questions, read interesting medical articles on a variety of subjects, be protected if they attend
+       student exchange projects and discover new things aboy any region around the Globe.
       </p>
     </section>
-<section typeof="sa:Development" id="development" role="doc-development">
+    <section typeof="sa:Development" id="development" role="doc-development">
       <h2> <span>2. </span>Development</h2>
       <section id=specifications>
-<h3> <span> 2.1 </span> Specificatii tehnice </h3> 
-      <p>
-       Limbaje folosite:
-      </p>
-      <p>
-       API-uri::pt confirmare ca adresa pusa la travel ca pct de pornire exista
-      </p>
-       <p>
-      Databases: db cu universitatii etc?! Ca sa vedem care sunt cercetatori?!gen pt login cu mail universitar, 
-      </p>
-<h3> <span> 2.2 </span> Structura site-ului</h3>
-<p> Site-ul este impartit in 8 pagini:Home, General topic, Forum, Blog, Travel adviser, Discover the world, Log in, About. 
-</p>
-<p>
-<b>Pagina Home</b> este primul impact cu vizitatorul. Aici se gaseste titlul site ului MAD, care este prescurtarea de la Medical Awesome data, aliat in centru sus. Sub titlu este o imagine sugestiva pentru tema site ului. Apoi sunt prezentate informatii generale despre site in sectiunea de About. Astfel utilizatorii sunt informatii despre principalele facilitati aduse de site ul MAD. Bara de meniu este o legatura directa catre paginile site ului. Este pozitionat in stanga paginii. Vizitatorii pot cauta diverse informatii pe site cu ajutorul unei bare de cautare si pot naviga in continutul paginii cu ajutorul unei bare de scroll. Sigla este pozitionata in stanga sus. Prin apasarea acesteia se revine la pagina de Home de pe oricare alta pagina.
+        <h3> <span> 2.1 </span> Thechnical specifications </h3>
+        <p>
+          Languages used: PHP, HTML, CSS, JavaScript
+        </p>
+        <p>
+          APIs:: to confirm that the input travel adress exists
+        </p>
+        <p>
+          Databases: MediSys, Gapminder World for diseases and country information, own databases with e-mail adresses
+          and types of users
+        </p>
+        <h3> <span> 2.2 </span> Website structure</h3>
+        <p> The website is composed of 8 pages:
+          <ul>
+	           <li>Home</li>
+             <li>General topic</li>
+             <li>Forum</li>
+             <li>Blog</li>
+             <li>Travel adviser</li>
+             <li>Discover the world</li>
+             <li>Log in</li>
+             <li>About</li>
+          </ul>
+        </p>
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>Homepage</b> Homepage is the face of the website, the first interaction with the user. Here you can find
+              alligned at the middle the title of the website, MAD. The title is an abreviation for Medical Awesome Data,
+              a name to appeal to its targeted audience. Below the title, the is an image appropriate and suggestive for
+              the theme of the website. After that, general information about the website are presented in the About section.
+              This way, the users are informed about the main resources that the website provides . The meniu strip located
+              to the left is a direct lynk to the pages of the website. Users can search for different information with the
+              aid of a search box  and they can navigate through the page using the scrollbar. The logo is at the top left
+              of the page and by pressing it, the homepage can be accessed from any other page.
+            </p>
+          </div>
+          <div class="column right">
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/homeMad.png?raw=true" width="600" height="300" alt="Homepage">
+          </div>
+        </div>
 
-</p>
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>General Topic Page</b> General Topic Page is a general presentation of the main categories from the website.
+              Here are the links of the Forum and Blog pages. The user can easily find the topic description, all questions
+              and answers linked to the subject and all articles published by professional authors, all on one page.
+            </p>
+          </div>
+          <div class="column right">
+            <p>
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/topicsMad.png?raw=true" width="600" height="300" alt="General topic page">
+            </p>
+          </div>
+        </div>
 
-<p>
-<b>Pagina General Topic</b> este o prezentare generala a principalelor categorii de pe site. Aici se face legatura cu pagina de forum si pagina de blog. Utilizatorul poate gasi mai usor intr-o singura pagina toate descrirea topicului, toate intrebarile si raspunsurile de pe site legate de subiect, toate articolele publicate de autori de specialitate. 
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>Forum Page</b> Forum Page allows seeing questions and answers posted on the website. In the foreground there
+              is the Best Adviser of the week to motivate users to promptly answer questions and provide quality input. The
+              title of "Best Adviser of the Week" is awarded to the user that has the most 5 stars reviewed answers. This
+              process resets itself every Monday at midnight to show the data from the previous week. Next to the awarded title
+              there is the picture and name of the winner. The same system goes for "Best Question of the Week". Asking new
+              questions is made by pressing the "New Question"  button, that opens a pop-up form in which the user can fill
+              Category and the question itself. The questions can be filtered by number of stars, popularity, most recent,
+              oldest and category. On the upper right side there is a commercials area.
+            </p>
+          </div>
+          <div class="column right">
+            <p>
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/forumMad.png?raw=true" width="600" height="300" alt="Forum page">
+            </p>
+          </div>
+        </div>
 
-</p>
-<p>
-<b>Pagina Forum</b> permite vizualizarea de intrebari si raspunsuri postate pe site.  In prim plan este adus best adviser of the week pentru a motiva utilizatorii sa raspunda cu promptitudine la intrebari si cu raspunsuri de calitate.Titlul de best adviser of the week se acorda persoanei care are cele mai multe raspunsuri cu 5 stelute. Acest proces se reseteaza in fiecare luni la ora 00:00 pentru a afisare  best adviser bazat pe datele din saptamana trecuta. In dreptul titulaturii de    best adviser of the week va aparea poza utilizatorului si numele acestuia. Dupa acelasi sistem se contorizeaza si cea mai buna intrebare a saptamanii. Adresarea de noi intrebari se face prin apasarea butonului intrebare noua. Aceasta deschide un formular sub forma unui pop-up  in care utilizatorul completeaza categoria si intrebarea sa.  Intrebarile pot fi filtrate in functie de stele, popularitatea, cele mai recente, cele mai vechi dar si in functie de categorie. Pe pagina se mai regaseste o zona de reclame in dreapta sus.
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>Blog Page</b> "Share your knowledge"  is dedicated to both professional authors and users that want to get
+              informed. Just for the first ones there is a button "New Article" that opens a pop-up that allows them to
+              write and post their knowledge. In the left upper side there is a Topics section where users can choose to
+              view topic specific articles. They can also discover the trending topics at that moment. To encourage users to
+              post useful articles, the "Best Article of the Week" title is awarded to the users that submit the article with
+              the most positive reviews. This follows the same path as the "Best Adviser of the Week" award. They are then
+              presented in cronological order.
+            </p>
+          </div>
+          <div class="column right">
+            <p>
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/blogMad.png?raw=true" width="600" height="300" alt="Blog page">
+            </p>
+          </div>
+        </div>
 
-</p>
-<p>
-<b> Pagina de Blog</b> share your knowledge este dedicata atat cercetatorilor care vor sa publice articole dar si vizitatorilor care vor sa se informeze. Doar pentru users care au calitatea de cercetarori este disponibil un buton de new article care deschide un pop-up in care acestea isi pot scrie si posta cunostintele. In partea de stanga sus este prezenta o zona dedicata topics de unde vizitatorii pot alege sa vada articole specifice unui anumit topic. Acestia pot descoperi si cele mai trending topics pentru a fi in pas cu ultimele noutati prezente pe site. Pentru  a incuraja postare de articole folositoare acordam titlul de best article of the week articolului cu cele mai multe reactii pozitive. Apoi sunt prezentate in ordine cronologica de la cel mai recent articol in partea de jos. 
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>Travel Medical Adviser Page</b> The Travel Medical Adviser Page is directed both at the students that want to
+              discover diseases and their vaccinations necessary in case of travel outside the borders and the adults that want
+              to be informed on the matter. Discovery of this information is done by adding the starting and ending point as
+              text in the input comboboxes named Continent, Region, Country and City. On the right side there is a sugestive
+              image for the destination country.
+            </p>
+          </div>
+          <div class="column right">
+            <p>
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/travelMad.png?raw=true" width="600" height="300" alt="Travel Medical Advisor page">
+            </p>
+          </div>
+        </div>
 
-</p>
-<p>
-<b> Pagina de Travel medical adviser</b> este dedicata atat elevilor care vor sa descopere bolile si vaccinurile necesare in cazul unei calatorii dar si adultilor care vor sa fie informati privind acest subiect. Descoperirea acestor informatii se face prin adaugarea locului de pornirea prin text completat de utilizator si  a alocului de destinatie prin combobox uri dedicate continent, region, contry, city. In partea dreapta este o imagine sugestiva pentru tara selectata ca destinatie.
-
-</p>
-<p>
-<b> Pagina Discover the world</b> este dedicata elevilor care vor sa descopere informatii medicale intr-un mod interactiv. Acestia sunt indemnati sa aleaga un punct pe glob pentru a descoperii population number, population density, climat, industrial development dar cel mai important pentru a obtine informatii despre factorii culturali care influenteaza mediul medical si principale boli comune acelui punct. Astfel iti poti imagina o calatorie in jurul lumii si poti vedea riscurile din punct de vedere medical la care te poti expune daca ajungi in zona respectiva.
-
-</p>
-<p>
-Elementele pastrate pe fiecare pagina sunt meniul, zona de cautare, zona de contact, zona de media si sigla. Navigarea este facilitata de o bara de scroll. Dand click pe articole sau intrebari se ajunge pe pagina dedicata pentru articole, Blog, sau intrebari, Forum.  
-</p>
-<h3> <span> 2.3 </span> Website design</h3>
-<p>
-<b>Navigation</b> este intuitiva. Meniul este usor accesibil de pe fiecare pagina. Se navigeaza usor pe pagina folosind bara de scroll. Utilizatorul scrie in permanenta pe ce pagina este datorita titlului si poate sa ajunga in alte pagini usor.
-</p>
-<p>
-<b>Visual design</b> este unul curat. Site ul are culoarea alb pentru fundal pe fiecare pagina, inspirand curatenia si strictetea mediului medical, cu accente de albastru si verde care ne duc cu gandul la prospetime si noutate. Titlurile principale sunt colorate in culoarea DodgerBlue 
-#1E90FF. Meniul este un gradient de albastru. 
-<p/>
+        <div class="row">
+          <div class="column left">
+            <p>
+              <b>Discover the World Page</b> Discover the World Page is designed for the students that want to discover
+              medical information in an interactive way. They can choose a point on the Globe to learn about things like
+              population number, population density, climat, industrial development, but most importanly, to learn about
+              cultural factors that influence the medical environment and the common diseases. This way they can imagine a
+              trip around the world while seeing the medical risks resulting from exposure to those areas.
+            </p>
+          </div>
+          <div class="column right">
+            <p>
+              <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/discoverMad.png?raw=true" width="600" height="300" alt="Discover the World page">
+            </p>
+          </div>
+        </div>
+        <p>
+          The elements kept on each page are the meniu, search bar, contact, media and logo sections. Navigation is facilitated
+          by a scrollbar. By clicking the articles or questions, the user arrives to the Articles, Blog, Forum or Questions page.
+        </p>
+        <h3> <span> 2.3 </span> Website design</h3>
+        <p>
+          <b>Navigation</b> The navigation is intuitive, with the meniu being accessible from every page. Navigation through a page is done using a scrollbar and there is a title of each page permanently showing at the top of the page.
+        </p>
+        <p>
+          <b>Visual design</b> The visual design is a clean one. The background color is white with blue titles and green accents, simulating the hospital coats that doctors and laboratory experts wear, as an inspiration for young adults that want to pursue this domain. The main titles are in DodgerBlue #1E90FF. The menu is a gradient blue.
+          <p/>
     </section>
- </body>
+  </body>
 </html>
-
-   
-
