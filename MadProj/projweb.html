@@ -41,8 +41,36 @@
     <header>
       <h1>MAD - Medical Awesome data</h1>
     </header>
+    <section>
+      <div role="content">
+        <ol>
+          <li><a href="#about">About</a></li>
+          <li><a href="#develop">Development</a>
+            <ol>
+              <li><a href="#specif">Technical specifications</a></li>
+              <li><a href="#structure">Website structure</a>
+                <ol>
+                  <li><a href="#home">Homepage</a></li>
+                  <li><a href="#topic">General Topic Page</a></li>
+                  <li><a href="#forum">Forum Page</a></li>
+                  <li><a href="#blog">Blog Page</a></li>
+                  <li><a href="#travel">Travel Medical Adviser Page</a></li>
+                  <li><a href="#discover">Discover the World Page</a></li>
+                </ol>
+              </li>
+              <li><a href="#design">Website design</a>
+                <ol>
+                  <li><a href="#navi">Navigation</a></li>
+                  <li><a href="#visual">Visual design</a></li>
+                </ol>
+              </li>
+            </li>
+          </ol>
+        </ol>
+      </div>
+    </section>
     <section typeof="sa:About" id="about" role="doc-about">
-      <h2> <span>1. </span>About</h2>
+      <h2 id="about"> <span>1. </span>About</h2>
       <p>
        MAD- Medical Awesome data
        is a website meant for medical advice. Middle and high school students have access to a platform where
@@ -52,9 +80,9 @@
       </p>
     </section>
     <section typeof="sa:Development" id="development" role="doc-development">
-      <h2> <span>2. </span>Development</h2>
+      <h2 id="develop"> <span>2. </span>Development</h2>
       <section id=specifications>
-        <h3> <span> 2.1 </span> Technical specifications </h3>
+        <h3 id="specif"> <span> 2.1 </span> Technical specifications </h3>
         <p>
           Languages used: PHP, HTML, CSS, JavaScript
         </p>
@@ -65,7 +93,7 @@
           Databases: MediSys, Gapminder World for diseases and country information, own databases with e-mail addresses
           and types of users
         </p>
-        <h3> <span> 2.2 </span> Website structure</h3>
+        <h3 id="structure"> <span> 2.2 </span> Website structure</h3>
         <p> The website is composed of 8 pages:
           <ul>
 	           <li>Home</li>
@@ -78,7 +106,7 @@
              <li>About</li>
           </ul>
         </p>
-        <div class="row">
+        <div class="row" id="home">
           <div class="column left">
             <p>
                <font color="#1E90FF"><b>Homepage</b></font>
@@ -98,7 +126,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="topic">
           <div class="column left">
             <p>
               <font color="#1E90FF"><b>General Topic Page</b></font>
@@ -115,7 +143,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="forum">
           <div class="column left">
             <p>
               <font color="#1E90FF"><b>Forum Page</b></font>
@@ -137,7 +165,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="blog">
           <div class="column left">
             <p>
                <font color="#1E90FF"><b>Blog Page</b></font>
@@ -158,7 +186,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="travel">
           <div class="column left">
             <p>
                <font color="#1E90FF"><b>Travel Medical Adviser Page</b></font>
@@ -177,7 +205,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="discover">
           <div class="column left">
             <p>
                <font color="#1E90FF"><b>Discover the World Page</b></font>
@@ -199,12 +227,12 @@
           The elements kept on each page are the menu, search bar, contact, media and logo sections. Navigation is facilitated
           by a scrollbar. By clicking the articles or questions, the user arrives to the Articles, Blog, Forum or Questions page.
         </p>
-        <h3> <span> 2.3 </span> Website design</h3>
-        <p>
+        <h3 id="design"> <span> 2.3 </span> Website design</h3>
+        <p id="navi">
           <b>Navigation</b> The navigation is intuitive, with the menu being accessible from every page. Navigation through a
           page is done using a scrollbar and there is a title of each page permanently showing at the top of the page.
         </p>
-        <p>
+        <p id="visual">
           <b>Visual design</b> The visual design is a clean one. The background color is white with <font color="blue">blue</font> titles and <font color="lightgreen">green</font>
           accents, simulating the hospital coats that doctors and laboratory experts wear, as an inspiration for young
           adults that want to pursue this domain. The main titles are in <font color="#1E90FF">DodgerBlue</font>. The menu is a <i class="text">gradient blue</i>.
