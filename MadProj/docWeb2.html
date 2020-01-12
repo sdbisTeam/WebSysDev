@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Medical Awesome Data HTML</title>
+    <link rel="stylesheet" href="scholarly.min.css">
+    <script src="scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://medical-awesome.com">
+    <header>
+      <div class="banner">
+        <!--<img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">-->
+        <h1>MAD</h1>
+        <div class="status">Technical Writing</div>
+      </div>
+      <h1>Medical Awesome Data HTML</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Balineanu Claudia, Berlea Smaranda, Lazar Delia
+        </dd>
+        <dt>Resources on GitHub</dt>
+        <dd>
+          <a href="https://github.com/sdbisTeam/WebSysDev">WebSysDev</a>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        MAD - Medical Awesome Data is a website meant for medical advice, that has as main audience
+        middle and high school students.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introduction</h2>
+      <p>
+        MAD- Medical Awesome data is a website meant for medical advice, that has as main audience
+        middle and high school students. They therefore have access to a platform where they can
+        find all sorts of information regarding the medical world. The website offers sections for
+        forums, blogs, travel and discover the world, in an interactive manner that appeals to students.
+      </p>
+      <p>
+        All these help them find answers to their questions either by searching existing data in the
+        website or asking them theirselves, and read interesting medical articles on a variety of subjects.
+        Withe the use of our website, students can also keep themselves informed and protected if they
+        attend student exchange projects. In addition to that, they can discover new things about any
+        region around the Globe.
+      </p>
+      <p>
+        Our high-level goals are to:
+      </p>
+      <ul>
+        <li>Enable structured data about medical conditions, around the world, for students and normal visitors.</li>
+        <li>Be fully funcitioning on modern Web browsers.</li>
+        <li>
+          Be customizable for inclusion in arbitrary Web sites with relevant articles, while remaining easy to process
+          and interoperable.
+        </li>
+        <li>A team of knowledgeable and approved researchers who can answer a variety of questions.</li>
+        <li>Build on top of open for all visitors.</li>
+        <li>Long-term viability as a data format.</li>
+      </ul>
+
+    </section>
+    <section id="architecture">
+      <!-- review? -->
+      <h2>Service-Oriented Architecture</h2>
+      <p>
+        Service-Oriented Architecture (SOA) is a style of software design where services are provided to
+        the other components by application components, through a communication protocol over a network.
+        Its principles are independent of vendors and other technologies. In service oriented architecture,
+        a number of services communicate with each other, in one of two ways: through passing data or
+        through two or more services coordinating an activity.
+      </p>
+      <section id="infrastructure">
+        <!-- review? -->
+        <h3>SOA Infrastructure</h3>
+        <p>
+          SOI provides a system for describing information technology (IT) infrastructure as a service.
+        </p>
+        <p>
+          <img src="" width="600" height="300" alt="Infrastructure">
+        </p>
+        <section id="dns">
+          <!-- review? -->
+          <h4><strong>DNS</strong></h4>
+          <p>
+            <a href="https://engineering.videoblocks.com/web-architecture-101-a3224e126947" target="_blank">link</a>
+            DNS stands for “Domain Name System” and it’s a backbone technology that makes the world
+            wide web possible. At the most basic level DNS provides a key/value lookup from a domain
+            name (e.g., google.com) to an IP address (e.g., 85.129.83.120), which is required in order
+            for your computer to route a request to the appropriate server.
+          </p>
+          <p>
+            Analogizing to phone numbers, the difference between a domain name and IP address is the
+            difference between “call John Doe” and “call 201-867–5309.” Just like you needed a phone
+            book to look up John’s number in the old days, you need DNS to look up the IP address for
+            a domain. So you can think of DNS as the phone book for the internet.
+          </p>
+          <p>
+            For our site we have chosen as domain name: <strong>www.medical-awesome.com</strong>
+          </p>
+        </section>
+        <section id="balancer">
+          <!-- review? -->
+          <h4><strong>Load Balancer</strong></h4>
+          <p>
+            They’re the magic sauce that makes scaling horizontally possible. <i>Horizontal scaling</i>
+            means that you scale by adding more machines into your pool of resources (Vertical scaling
+            means that you scale by adding more power (CPU, RAM) to an existing machine). In web
+            development, you (almost) always want to scale horizontally because, to keep it simple,
+            stuff breaks. Servers crash randomly. Networks degrade. Entire data centers occasionally
+            go offline. Having more than one server allows you to plan for outages so that your
+            application continues running. In other words, your app is “fault tolerant.”
+          </p>
+          <p>
+            Secondly, horizontal scaling allows you to minimally couple different parts of your
+            application backend (web server, database, service X, etc.) by having each of them run
+            on different servers. Lastly, you may reach a scale where it’s not possible to vertically
+            scale any more. There is no computer in the world big enough to do all your app’s computations.
+          </p>
+          <p>
+            Load balancers route incoming requests to one of many application servers that are typically
+            clones / mirror images of each other and send the response from the app server back to the
+            client. Any one of them should process the request the same way so it’s just a matter of
+            distributing the requests across the set of servers so none of them are overloaded.
+          </p>
+          <p>
+            Load balancing improves the distribution of workloads across multiple computing resources,
+            such as computers, a computer cluster, network links, central processing units, or disk
+            drives. Load balancing aims to optimize resource use, maximize throughput, minimize
+            response time, and avoid overload of any single resource. Using multiple components with
+            load balancing instead of a single component may increase reliability and availability
+            through redundancy. Load balancing usually involves dedicated software or hardware, such
+            as a multilayer switch or a Domain Name System server process.
+          </p>
+          <p>
+            <a href="https://www.nginx.com/resources/glossary/load-balancing/" target="_blank">NGINX
+            </a> one of the best-in-class load‑balancing solutions used by high‑traffic websites.
+            NGINX Plus and NGINX deliver their content quickly, reliably, and securely.
+          </p>
+        </section>
+        <section id="server">
+          <!-- review? -->
+          <h4><strong>Web Application Servers</strong></h4>
+          <p>
+            Web application servers execute the core business logic that handles a user’s request
+            and sends back HTML to the user’s browser. To do their job, they typically communicate
+            with a variety of backend infrastructure such as databases, caching layers, job queues,
+            search services, other microservices, data/logging queues, and more. As mentioned above,
+            you typically have at least two and often times many more, plugged into a load balancer
+            in order to process user requests.
+          </p>
+          <p>
+            App server implementations require choosing a specific language and for ous site we choose
+            <a href="https://www.php.net/manual/en/intro-whatis.php" target="_blank">PHP</a> and a web
+            MVC framework for that language <a href="https://laravel.com/" target="_blank">Laravel</a>.
+          </p>
+        </section>
+        <section id="database">
+          <!-- review? -->
+          <h4><b>Database Servers</b></h4>
+          <p>
+            Databases provide ways of defining your data structures, inserting new data, finding existing
+            data, updating or deleting existing data, performing computations across the data, and more.
+            In most cases the web app servers talk directly to one, as will the job servers. Additionally,
+            each backend service may have it’s own database that’s isolated from the rest of the application.
+          </p>
+          <p>
+            For our project we choose as data Apache2 and two open-source relational database management
+            systems(RDBMS) <a href="https://www.mysql.com/" target="_blank">MySQL</a> and <a href="https://mariadb.org/" target="_blank">MariaDB</a>.
+          </p>
+        </section>
+        <section id="caching">
+          <!-- review? -->
+          <h4><strong>Caching Service</strong></h4>
+          <p>
+            A caching service provides a simple key/value data store that makes it possible to save and lookup
+            information in close to O(1) time. Applications typically leverage caching services to save the
+            results of expensive computations so that it’s possible to retrieve the results from the cache
+            instead of recomputing them the next time they’re needed. An application might cache results
+            from a database query, calls to external services, HTML for a given URL, and many more. Here are
+            some examples from real world applications:
+          </p>
+          <p>
+            <ul>
+              <li>Google caches search results for common search queries like “dog” rather than re-computing
+                them each time</li>
+              <li>Facebook caches much of the data you see when you log in, such as post data, friends, etc.</li>
+              <li>MAD caches the HTML output from server-side <a href="https://reactjs.org/docs/rendering-elements.html" target="_blank">React rendering</a>, search results, typeahead
+                results, and more. More about <a href="https://css-tricks.com/render-caching-for-react/" target="_blank">Render Caching for React</a></li>
+            </ul>
+          </p>
+          <p>
+            <i>Server Side Rendering</i> (SSR) is a very useful technique that makes web apps appear faster. The
+            initial HTML is displayed before the JavaScript is parsed and, while the user is deciding what
+            to tap on, our handlers are ready.
+            Server side rendering in React requires additional work to setup and has server costs. Furthermore,
+            if your server team cannot have JavaScript running on your servers, you are stuck. It significantly
+            complicates the <a href="#cdn">CDN</a> setup especially if you have pages that require login and where the user’s
+            information is managed.
+          </p>
+          <p>
+            <!--
+            We use one of the most widespread caching server technologie <a href="https://memcached.org/" target="_blank">Memcached</a>.
+          -->
+          </p>
+        </section>
+        <section id="job">
+          <!-- review? -->
+          <h4><strong>Job Queue & Servers</strong></h4>
+          <p>
+            Most web applications need to do some work asynchronously behind the scenes that’s not directly
+            associated with responding to a user’s request. For instance, Google needs to crawl and index
+            the entire internet in order to return search results. It does not do this every time you search.
+            Instead, it crawls the web asynchronously, updating the search indexes along the way.
+          </p>
+          <p>
+            While there are different architectures that enable asynchronous work to be done, the most
+            ubiquitous is what I’ll call the “job queue” architecture. It consists of two components: a queue
+            of “jobs” that need to be run and one or more job servers (often called “workers”) that run the
+            jobs in the queue.
+          </p>
+          <p>
+            Job queues store a list of jobs that need to be run asynchronously. The simplest are
+            first-in-first-out (FIFO) queues though most applications end up needing some sort of priority
+            queuing system. Whenever the app needs a job to be run, either on some sort of regular schedule
+            or as determined by user actions, it simply adds the appropriate job to the queue.
+          </p>
+          <p>
+            <i>MAD</i>, for instance, leverages a job queue to power a lot of the behind-the-scenes work
+            required to support our marketplaces. We run jobs to encode videos and photos, process CSVs
+            for metadata tagging, aggregate user statistics, send password reset emails, and more. We
+            started with a simple FIFO queue though we upgraded to a priority queue to ensure that
+            time-sensitive operations like sending password reset emails were completed ASAP.
+          </p>
+          <p>
+            Job servers process jobs. They poll the job queue to determine if there’s work to do and if
+            there is, they pop a job off the queue and execute it. <a href="https://geekflare.com/queuing-systems-for-backend-developers/" target="_blank">Redis</a>
+          </p>
+        </section>
+        <section id="search">
+          <!-- review? -->
+          <h4><strong>Full-text Search Service</strong></h4>
+          <p>
+            Many if not most web apps support some sort of search feature where a user provides a text
+            input (often called a “query”) and the app returns the most “relevant” results. The technology
+            powering this functionality is typically referred to as “full-text search”, which leverages
+            an inverted index to quickly look up documents that contain the query keywords.
+          </p>
+          <p>
+            It’s possible to do full-text search directly from MySQL because it supports
+            full-text search.
+          </p>
+        </section>
+        <section id="service">
+          <!-- review? -->
+          <h4><strong>Services</strong></h4>
+          <p>
+            Once an app reaches a certain scale, there will likely be certain “services” that are carved
+            out to run as separate applications. They’re not exposed to the external world but the app and
+            other services interact with them. MAD, for example, has several operational and planned
+            services:
+          </p>
+          <p>
+            <ul>
+              <li>Account service stores user data across all our sites, which allows us to easily offer
+                relevant information and create a more unified user experience</li>
+              <li>Content service stores metadata for all of our video, audio, and image content. It also
+                provides interfaces for downloading the content and viewing download history.</li>
+              <li>HTML → PDF service provides a simple interface that accepts HTML and returns a
+                corresponding PDF document.</li>
+            </ul>
+          </p>
+        </section>
+        <section id="data">
+          <!-- review? -->
+          <h4><strong>Data</strong></h4>
+          <p>
+            Today, companies live and die based on how well they harness data. Almost every app these
+            days, once it reaches a certain scale, leverages a data pipeline to ensure that data can be
+            collected, stored, and analyzed. A typical pipeline has three main stages:
+          </p>
+          <p>
+            <ol>
+              <li>
+                The app sends data, typically events about user interactions, to the data “firehose” which
+                provides a streaming interface to ingest and process the data. Often times the raw data is
+                transformed or augmented and passed to another firehose. AWS Kinesis is one of the
+                most common technologies for this purpose.
+              </li>
+              <li>
+                The raw data as well as the final transformed/augmented data are saved to cloud storage.
+                AWS Kinesis provides a setting called “firehose” that makes saving the raw data to it’s
+                cloud storage extremely easy to configure.
+              </li>
+              <li>
+                The transformed/augmented data is often loaded into a data warehouse for analysis. We
+                use AWS Redshift, as does a large and growing portion of the startup world, though larger
+                companies will often use Oracle or other proprietary warehouse technologies.
+              </li>
+            </ol>
+          </p>
+          <p>
+            Another step that’s not pictured in the architecture diagram: loading data from the app
+            and services’ operational databases into the data warehouse. For example at MAD
+            we load our VideoBlocks, AudioBlocks, Storyblocks, account service, and contributor portal
+            databases into Redshift every night. This provides our analysts a holistic dataset by
+            co-locating the core business data alongside our user interaction event data.
+          </p>
+        </section>
+        <section id="cloud">
+          <!-- review? -->
+          <h4><strong>Cloud storage</strong></h4>
+          <p>
+            “Cloud storage is a simple and scalable way to store, access, and share data over the Internet”
+            according to <a href="Full-text Search Service" target="_blank">AWS</a>. You can use it to store and access more or less anything you’d store on a
+            local file system with the benefits of being able to interact with it via a RESTful API over
+            HTTP. Amazon’s S3 offering is by far the most popular cloud storage available today and the
+            one we rely on extensively here at MAD to store our video, photo, and audio assets,
+            our CSS and Javascript, our user event data and much more.
+          </p>
+        </section>
+        <section id="cdn">
+          <!-- review? -->
+          <h4><strong>CDN</strong></h4>
+          <p>
+            CDN stands for “Content Delivery Network” and the technology provides a way of serving
+            assets such as static HTML, CSS, Javascript, and images over the web much faster than
+            serving them from a single origin server. It works by distributing the content across
+            many “edge” servers around the world so that users end up downloading assets from the
+            “edge” servers instead of the origin server. For instance a user in
+            Spain requests a web page from a site with origin servers in NYC, but the static assets
+            for the page are loaded from a CDN “edge” server in England, preventing many slow
+            cross-Atlantic HTTP requests.
+          </p>
+          <p>
+            In general a web app should always use a CDN to serve CSS, Javascript, images, videos
+            and any other assets, that is why for our site we used <a href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/" target="_blank">Cloudflare CDN</a>.
+          </p>
+        </section>
+      </section> <!-- infrastructure -->
+    </section>  <!-- architecture -->
+
+    <section id="internals">
+        <!-- review? -->
+        <h2>Web system internals</h2>
+        <p>
+
+        </p>
+        <ul>
+          <li>
+          </li>
+          <li>
+
+          </li>
+          <li>
+
+          </li>
+        </ul>
+        <section id="entity-relationship">
+          <!-- review? -->
+          <h3>Entity-relationship model</h3>
+          <p>
+            An entity-relationship model (ERM) referred to as an entity-relationship
+            diagram (ERD) that could be used to represent an abstract conceptual data model (or
+            semantic data model or physical data model) used in software engineering to represent
+            structured data.
+          </p>
+          <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/er.jpg" width="600" height="300" alt="Entity-relationship model">
+        </section>
+        <section id="external-sources">
+          <!-- review? -->
+          <h3>External Data Sources</h3>
+          <p>
+            MediSys, Gapminder World for diseases and country information, own databases with e-mail addresses
+            and types of users
+          </p>
+        </section>
+        <section id="external-services">
+          <!-- review? -->
+          <h3>External services - APIs</h3>
+          <p>
+
+          </p>
+        </section>
+    </section>  <!-- internals-->
+
+
+
+
+      <section id="acknowledgements">
+        <!-- review? -->
+        <h3>Acknowledgements</h3>
+        <p>
+          XXX
+        </p>
+      </section>
+
+
+
+    <section id="scholarly-article">
+      <!-- review? -->
+      <h2>Scholarly Article Vocabulary</h2>
+      <p>
+        A limited number of classes and properties are currently not available from
+        <a role="doc-biblioref">schema.org</a>. In most if not all cases it would be desirable to
+        make them available there, but while work is progressing it is simpler to define them
+        ourselves.
+      </p>
+      <p class="issue">
+        The current URL for the Scholarly Article vocabulary is
+        <code>http://ns.science.ai/</code>. It may be desirable (should the vocabulary persist) to
+        use a different URL. But this issue might go away if schema.org steps up.
+      </p>
+      <p>
+        You can read the <a href="http://ns.science.ai/">definitions for the SA vocabulary</a>.
+      </p>
+    </section>
+    <section id="hypermedia">
+      <!-- review? -->
+      <h2>Hypermedia Controls</h2>
+      <!--
+        - explain how to model hypermedia integration, cases:
+          - viewing
+          - paying
+          - annotating
+      -->
+    </section>
+    <section id="processing-model">
+      <!-- review? -->
+      <h2>Processing Model</h2>
+      <!--
+        - basically explain what a processor ignores and what its internal model looks like
+        - the processing extracts (almost) pure HTML, it then uses the RDFa to enrich that
+      -->
+    </section>
+    <section id="acks">
+      <!-- review? -->
+      <h2>Acknowledgements</h2>
+      <p>
+        Scholarly HTML would like to thank <a href="http://scholarlyhtml.org/">Scholarly HTML</a>
+        (you read that right) for blazing the trail perhaps a few years too soon. Particularly,
+        the following people were particularly kind and helpful:
+        <a href="https://twitter.com/ptsefton">Peter Sefton</a>,
+        <a href="https://twitter.com/blahah404">Richard Smith-Unna</a>, and
+        <a href="https://twitter.com/petermurrayrust">Peter Murray-Rust</a>.
+      </p>
+      <p>
+        PLOS has a
+        <a href="http://blogs.plos.org/mfenner/2011/03/19/a-very-brief-history-of-scholarly-html/">short
+        history of Scholarly HTML</a> that is worth reading (and would be worth updating).
+      </p>
+      <p>
+        Dan Brickley was kind enough to drop by the office to chat about our usage of
+        <a href="http://schema.org">schema.org</a> even though he was tired and hungry. As
+        always, examples involving fish tanks are the most helpful. Dave Cramer shared ideas
+        that we happily stole.
+      </p>
+      <p>
+        Patrick Johnston’s input has been crucial, notably in modeling authoring. We can only
+        hope that getting those details exactly right have not caused him to lose too much
+        sleep.
+      </p>
+      <p>
+        We also received very useful feedback and pointers from: Kjetil Kjernsmo (DAHUT!),
+        Silvio Peroni, Justin Johansson, Alf Eaton, Raniere Silvia, Kaveh Bazargan and Mike
+        Smith. We are very much indebted to the help provided us by Ivan Herman.
+      </p>
+      <p>
+        If we somehow forgot you in this list and you are too gracious to complain, we love you
+        all the same.
+      </p>
+    </section>
+  </body>
+</html>
