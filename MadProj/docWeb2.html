@@ -395,15 +395,35 @@
           <!-- review? -->
           <h3>External Data Sources</h3>
           <p>
-            MediSys, Gapminder World for diseases and country information, own databases with e-mail addresses
-            and types of users
+            For informations about diseases and other medical conditions, we get the necessary informations from
+            MediSys, Gapminder World. For countries informations, such as population and cultural factors we get the information from
+            <a href="https://www.hofstede-insights.com/product/compare-countries/" target="_blank">Hofstede Insights</a> and simply
+            searching on Google.
           </p>
         </section>
         <section id="external-services">
           <!-- review? -->
           <h3>External services - APIs</h3>
           <p>
-
+            An application programming interface (API) is an interface or communication protocol between different parts of a computer
+            program intended to simplify the implementation and maintenance of software.
+          </p>
+          <strong>APIs for map</strong>
+          <p>
+            Geolocation API - Find a location and accuracy radius based on information from things like cell towers and WiFi access points that a mobile client can detect
+            with the Geolocation API. This is primarily used where GPS is not possible or appropriate.
+          </p>
+          <p>
+            Maps Static API - Place a Google Maps image on your webpage without requiring JavaScript or any dynamic page loading with the Maps Static API. This service
+            creates your map based on URL parameters sent through a standard HTTP request and returns the map as an image.
+          </p>
+          <p>
+            Geocoding API - Convert addresses into geographic coordinates (geocoding), which you can use to place markers or position the map. This API also allows you
+            to convert geographic coordinates into an address (reverse geocoding).
+          </p>
+          <p>
+            Maps JavaScript API - Add a map to your website, providing imagery and local data from the same source as Google Maps. Style the map to suit your needs.
+            Visualize your own data on the map, bring the world to life with Street View, and use services like geocoding and directions.
           </p>
         </section>
     </section>  <!-- internals-->
@@ -411,87 +431,74 @@
 
 
 
-      <section id="acknowledgements">
+      <section id="user">
         <!-- review? -->
-        <h3>Acknowledgements</h3>
+        <h2>User guide</h2>
         <p>
-          XXX
+          A user guide, also commonly called a technical communication document or manual,
+          is intended to give assistance to people using a particular system.
+        </p>
+        <p>
+          For our site exist 3 types of Users:
+          <ol>
+            <li>visitator - is the user without a account which can't ask questions, nor answer them</li>
+            <li>recorded(student) - is the user which has an account, can ask questions but can't answer them</li>
+            <li>scientist - is the user with an account (scientist = true), can ask questions and answer them
+            (usualy the scientists are for answering, not to ask questions, but they can do that)</li>
+          </ol>
+        </p>
+
+        <section id="visitator">
+          <!-- review? -->
+          <h3>Story case - visitator </h3>
+          <p>
+            explic ce si cum poate face acest tip de user si poze
+          </p>
+        </section>
+        <section id="recorded">
+          <!-- review? -->
+          <h3>Story case - recorded </h3>
+          <p>
+
+          </p>
+        </section>
+        <section id="scientist">
+          <!-- review? -->
+          <h3>Story case - scientist </h3>
+          <p>
+
+          </p>
+        </section>
+      </section> <!-- user -->
+      <section id="site">
+        <!-- review? -->
+        <h2>Our site</h2>
+        <p>
+          video cu site-ul ////
         </p>
       </section>
 
 
+    <section id="references">
+      <!-- review? -->
+      <h2>References</h2>
+      <p>
+        aici link-uri cu referinte
+      </p>
+      <p>
 
-    <section id="scholarly-article">
-      <!-- review? -->
-      <h2>Scholarly Article Vocabulary</h2>
-      <p>
-        A limited number of classes and properties are currently not available from
-        <a role="doc-biblioref">schema.org</a>. In most if not all cases it would be desirable to
-        make them available there, but while work is progressing it is simpler to define them
-        ourselves.
-      </p>
-      <p class="issue">
-        The current URL for the Scholarly Article vocabulary is
-        <code>http://ns.science.ai/</code>. It may be desirable (should the vocabulary persist) to
-        use a different URL. But this issue might go away if schema.org steps up.
       </p>
       <p>
-        You can read the <a href="http://ns.science.ai/">definitions for the SA vocabulary</a>.
-      </p>
-    </section>
-    <section id="hypermedia">
-      <!-- review? -->
-      <h2>Hypermedia Controls</h2>
-      <!--
-        - explain how to model hypermedia integration, cases:
-          - viewing
-          - paying
-          - annotating
-      -->
-    </section>
-    <section id="processing-model">
-      <!-- review? -->
-      <h2>Processing Model</h2>
-      <!--
-        - basically explain what a processor ignores and what its internal model looks like
-        - the processing extracts (almost) pure HTML, it then uses the RDFa to enrich that
-      -->
-    </section>
-    <section id="acks">
-      <!-- review? -->
-      <h2>Acknowledgements</h2>
-      <p>
-        Scholarly HTML would like to thank <a href="http://scholarlyhtml.org/">Scholarly HTML</a>
-        (you read that right) for blazing the trail perhaps a few years too soon. Particularly,
-        the following people were particularly kind and helpful:
-        <a href="https://twitter.com/ptsefton">Peter Sefton</a>,
-        <a href="https://twitter.com/blahah404">Richard Smith-Unna</a>, and
-        <a href="https://twitter.com/petermurrayrust">Peter Murray-Rust</a>.
+
       </p>
       <p>
-        PLOS has a
-        <a href="http://blogs.plos.org/mfenner/2011/03/19/a-very-brief-history-of-scholarly-html/">short
-        history of Scholarly HTML</a> that is worth reading (and would be worth updating).
+
       </p>
       <p>
-        Dan Brickley was kind enough to drop by the office to chat about our usage of
-        <a href="http://schema.org">schema.org</a> even though he was tired and hungry. As
-        always, examples involving fish tanks are the most helpful. Dave Cramer shared ideas
-        that we happily stole.
+
       </p>
       <p>
-        Patrick Johnston’s input has been crucial, notably in modeling authoring. We can only
-        hope that getting those details exactly right have not caused him to lose too much
-        sleep.
-      </p>
-      <p>
-        We also received very useful feedback and pointers from: Kjetil Kjernsmo (DAHUT!),
-        Silvio Peroni, Justin Johansson, Alf Eaton, Raniere Silvia, Kaveh Bazargan and Mike
-        Smith. We are very much indebted to the help provided us by Ivan Herman.
-      </p>
-      <p>
-        If we somehow forgot you in this list and you are too gracious to complain, we love you
-        all the same.
+
       </p>
     </section>
   </body>
