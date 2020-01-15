@@ -225,9 +225,9 @@
             information is managed.
           </p>
           <p>
-            <!--
-            We use one of the most widespread caching server technologie <a href="https://memcached.org/" target="_blank">Memcached</a>.
-          -->
+            
+            We use one of the most widespread caching server technologie <a href="https://redis.io/" target="_blank">Redis</a>.
+
           </p>
         </section>
         <section id="job">
@@ -388,7 +388,7 @@
           <!-- review? -->
           <h3>External Data Sources</h3>
           <p>
-            For informations about diseases and other medical conditions, we get the necessary informations from
+            For data about diseases and other medical conditions, we get the necessary information from
             <a href="https://medisys.newsbrief.eu/medisys/homeedition/en/home.html" target="_blank">MediSys</a>, <a href="https://www.gapminder.org/data/" target="_blank">Gapminder World</a>. For countries informations, such as population and cultural factors we get the information from
             <a href="https://www.hofstede-insights.com/product/compare-countries/" target="_blank">Hofstede Insights</a> and simply
             searching on Google.
@@ -434,29 +434,29 @@
         <p>
           For our site exist 3 types of Users:
           <ol>
-            <li>visitator - is the user without a account which can't ask questions, nor answer them</li>
+            <li>visitor - is the user without a account which can't ask questions, nor answer them</li>
             <li>recorded(student) - is the user which has an account, can ask questions but can't answer them</li>
             <li>scientist - is the user with an account (scientist = true), can ask questions and answer them
             (usualy the scientists are for answering, not to ask questions, but they can do that)</li>
           </ol>
         </p>
 
-        <section id="visitator">
+        <section id="visitor">
           <!-- review? -->
-          <h3>Story case - visitator </h3>
+          <h3>Story case - visitor </h3>
           <p>
-            The visitator user is the only type of user that doesn't have to login. He can see all the informations about
-            any medical condition or anything else but can't contribut with articles, answer or ask questions.
+            The visitor user is the only type of user that doesn't have to login. He can see all the data about
+            any medical condition or anything else but can't contribute with articles, answer or ask questions.
 
           </p>
-          <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/visitator.jpg?raw=true" width="600" height="400" alt="Visitator">
+          <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/visitator.jpg?raw=true" width="600" height="400" alt="Visitor">
         </section>
         <section id="recorded">
           <!-- review? -->
           <h3>Story case - recorded </h3>
           <p>
             The recorded user, meaning the user which has an account but is not a scientist (see <a href="#entity-relationship">entity-relationship</a>)
-            can see all the informations the same as the visitator user but this type of user can ask questions on the Forum page.
+            can see all the data the same as the visitor user but this type of user can ask questions on the Forum page.
           </p>
           <img src="https://github.com/sdbisTeam/WebSysDev/blob/master/MadProj/images/recorded.jpg?raw=true" width="600" height="400" alt="Recorded">
         </section>
@@ -464,7 +464,7 @@
           <!-- review? -->
           <h3>Story case - scientist </h3>
           <p>
-            This user has all the caracteristics as the users above but this type of user can answer the questions from the recorded users
+            This user has all the characteristics as the users above but this type of user can answer the questions from the recorded users
             and also post articles on Blog page.
 
           </p>
